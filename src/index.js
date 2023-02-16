@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const IS_ANDROID = /android/i.test(navigator.userAgent);
@@ -30,7 +31,8 @@ const activateAR = (href, isQuickLook, button) => {
   anchor.setAttribute('href', href);
   anchor.click();
 
-  return Notify.success('The start of AR-session may take a few seconds');
+  return Notiflix.Loading.hourglass('AR may need a few seconds to load...');
+
   anchor.addEventListener('message', event => {
     button.dispatchEvent(new CustomEvent('quick-look-button-tapped'));
   });
