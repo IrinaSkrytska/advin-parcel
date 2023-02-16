@@ -38,8 +38,6 @@ const activateAR = (href, isQuickLook, button) => {
   anchor.addEventListener('message', event => {
     button.dispatchEvent(new CustomEvent('quick-look-button-tapped'));
   });
-
-  Notiflix.Loading.remove();
 };
 
 const handleClickAR = (event, button, id) => {
