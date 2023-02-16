@@ -34,10 +34,6 @@ const activateAR = (href, isQuickLook, button) => {
   anchor.addEventListener('message', event => {
     button.dispatchEvent(new CustomEvent('quick-look-button-tapped'));
   });
-
-  Notiflix.Loading.hourglass('AR may need a few seconds to load...', {
-    clickToClose: true,
-  });
 };
 
 const handleClickAR = (event, button, id) => {
