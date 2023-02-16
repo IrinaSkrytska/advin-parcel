@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>ADVIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <ar-button data-id="63da9f3dd30155ad08fa4528">
+      <div>
+        <button type="button" class="button">AR button</button>
+      </div>
+    </ar-button>
+    <ar-button data-id="63da9f3dd30155ad08fa4529">
+      <div>
+        <button type="button" class="button">AR button</button>
+      </div>
+    </ar-button>
+    <ar-button data-id="63da9f3dd30155ad08fa452a">
+      <div>
+        <button type="button" class="button">AR button</button>
+      </div>
+    </ar-button>
+
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

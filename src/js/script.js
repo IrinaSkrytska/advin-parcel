@@ -1,5 +1,3 @@
-import { Notify } from "notiflix/build/notiflix-notify-aio";
-
 const IS_ANDROID = /android/i.test(navigator.userAgent);
 const IS_IOS =
   (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) ||
