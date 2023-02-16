@@ -35,7 +35,7 @@ const activateAR = (href, isQuickLook, button) => {
     button.dispatchEvent(new CustomEvent('quick-look-button-tapped'));
   });
 
-  return Notiflix.Loading.hourglass('AR may need a few seconds to load...', {
+  Notiflix.Loading.hourglass('AR may need a few seconds to load...', {
     clickToClose: true,
   });
 };
