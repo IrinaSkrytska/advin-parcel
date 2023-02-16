@@ -1,5 +1,5 @@
-import Notiflix from 'notiflix';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+// import Notiflix from 'notiflix';
+// import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const IS_ANDROID = /android/i.test(navigator.userAgent);
 const IS_IOS =
