@@ -31,11 +31,15 @@ const activateAR = (href, isQuickLook, button) => {
   anchor.setAttribute('href', href);
   anchor.click();
 
-  return Notiflix.Loading.hourglass('AR may need a few seconds to load...');
+  return Notiflix.Loading.hourglass('AR may need a few seconds to load...', {
+    clickToClose: true,
+  });
 
   anchor.addEventListener('message', event => {
     button.dispatchEvent(new CustomEvent('quick-look-button-tapped'));
   });
+
+  Notiflix.Loading.remove();
 };
 
 const handleClickAR = (event, button, id) => {
