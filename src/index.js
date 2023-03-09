@@ -31,9 +31,12 @@ const activateAR = (href, isQuickLook, button) => {
   anchor.setAttribute('href', href);
   anchor.click();
 
-  Notiflix.Loading.hourglass('AR may need a few seconds to load...', {
-    clickToClose: true,
-  });
+  Notiflix.Loading.hourglass(
+    'Please, wait up to 30 seconds. 3D-courier is on the way to you! ',
+    {
+      clickToClose: true,
+    }
+  );
 
   Notiflix.Loading.remove(3000);
 
