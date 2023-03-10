@@ -1,3 +1,6 @@
+import Notiflix from 'notiflix';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 $(document).ready(function () {
   const buttonChair = document.querySelector('.chair');
   const buttonWashingMachine = document.querySelector('.washingMachine');
