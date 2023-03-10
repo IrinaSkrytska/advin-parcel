@@ -228,21 +228,6 @@ $(document).ready(function () {
     }
     anchor.setAttribute('href', href);
     anchor.click();
-    
-    console.log('I`m here and notiflix should be working');
-
-    Notiflix.Loading.hourglass(
-      'Будь ласка, почекайте до 30 секунд. 3D-кур’єр вже прямує до вас!',
-      {
-        clickToClose: true,
-        svgColor: 'rgb(255, 87, 34)',
-        messageMaxLength: 200,
-        messageFontSize: '18px',
-        fontFamily: 'Furore',
-      }
-    );
-
-    Notiflix.Loading.remove(2000);
 
     anchor.addEventListener('message', event => {
       button.dispatchEvent(new CustomEvent('quick-look-button-tapped'));
@@ -255,6 +240,19 @@ $(document).ready(function () {
     // }
 
     if (IS_IOS_CHROME || IS_IOS_SAFARI || IS_IOS) {
+      Notiflix.Loading.hourglass(
+        'Please, wait up to 30 seconds. AR-courier is on the road to you!',
+        {
+          clickToClose: true,
+          fontFamily: 'Furore',
+          fontSize: '24px',
+          svgColor: 'rgb(255, 87, 34)',
+          messageMaxLength: 200,
+        }
+      );
+
+      Notiflix.Loading.remove(2000);
+
       button.setAttribute('ar', 'quick-look');
       button.dispatchEvent(
         new CustomEvent('initialized', { detail: 'quick-look' })
@@ -273,17 +271,23 @@ $(document).ready(function () {
           let href = `${iosSrc}#custom=https://adv-marketplace.advin-global.com/witnes.html&allowsContentScaling=0`;
           console.log(href);
 
-          Notiflix.Loading.hourglass('AR may need a few seconds to load...', {
-            clickToClose: true,
-          });
-
-          Notiflix.Loading.remove(3000);
-
           const Element = document.getElementById('ar-link');
           Element.href = `${iosSrc}#custom=https://adv-marketplace.advin-global.com/witnes.html&allowsContentScaling=0`;
           Element.click();
         });
     } else if (SUPPORTS_SCENEVIEWER) {
+      Notiflix.Loading.hourglass(
+        'Please, wait up to 30 seconds. AR-courier is on the road to you!',
+        {
+          clickToClose: true,
+          fontFamily: 'Furore',
+          fontSize: '24px',
+          svgColor: 'rgb(255, 87, 34)',
+          messageMaxLength: 200,
+        }
+      );
+
+      Notiflix.Loading.remove(2000);
       // system supports AR via scene viewer
       fetch(`https://adv-marketplace-back.onrender.com/examples/models/${id}`, {
         cache: 'no-store',
@@ -291,8 +295,6 @@ $(document).ready(function () {
         .then(response => response.json())
         .then(({ data }) => {
           const androidSrc = data.model.android;
-
-          console.log(androidSrc);
 
           if (!androidSrc) {
             console.error('Invalid src in <ar-button>: ' + button);
