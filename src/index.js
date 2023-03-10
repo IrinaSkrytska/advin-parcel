@@ -241,7 +241,7 @@ $(document).ready(function () {
 
     if (IS_IOS_CHROME || IS_IOS_SAFARI || IS_IOS) {
       Notiflix.Loading.hourglass(
-        'Please, wait up to 30 seconds. AR-courier is on the road to you!',
+        'Please,wait up to 30 seconds. AR-courier is on the road to you!',
         {
           clickToClose: true,
           fontFamily: 'Furore',
