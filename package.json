@@ -4,8 +4,8 @@
   "description": "",
   "homepage": "https://IrinaSkrytska.github.io/advin-parcel",
   "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /advin-parcel/"
+    "start": "parcel /*.html",
+    "build": "parcel build /*.html --public-url /advin-parcel/"
   },
   "repository": {
     "type": "git",

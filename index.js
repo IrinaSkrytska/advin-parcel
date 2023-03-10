@@ -216,6 +216,7 @@ $(document).ready(function () {
       anchor.relList && anchor.relList.supports && anchor.relList.supports('ar')
     );
   })();
+  //   const i = navigator.maxTouchPoints === 1;
 
   const activateAR = (href, isQuickLook, button) => {
     const anchor = document.createElement('a');
@@ -229,9 +230,16 @@ $(document).ready(function () {
     anchor.click();
     console.log('I`m here and notiflix should be working');
 
-    Notiflix.Loading.hourglass('AR may need a few seconds to load...', {
-      clickToClose: true,
-    });
+    Notiflix.Loading.hourglass(
+      'Будь ласка, почекайте до 30 секунд. 3D-кур’єр вже прямує до вас!',
+      {
+        clickToClose: true,
+        svgColor: 'rgb(255, 87, 34)',
+        messageMaxLength: 200,
+        messageFontSize: '18px',
+        fontFamily: 'Furore',
+      }
+    );
 
     Notiflix.Loading.remove(2000);
 
@@ -241,6 +249,10 @@ $(document).ready(function () {
   };
 
   const handleClickAR = (event, button, id) => {
+    // if (i) {
+    //   return;
+    // }
+
     if (IS_IOS_CHROME || IS_IOS_SAFARI || IS_IOS) {
       button.setAttribute('ar', 'quick-look');
       button.dispatchEvent(
