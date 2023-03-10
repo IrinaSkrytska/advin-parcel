@@ -233,7 +233,7 @@ $(document).ready(function () {
       clickToClose: true,
     });
 
-    Notiflix.Loading.remove(3000);
+    Notiflix.Loading.remove(2000);
 
     anchor.addEventListener('message', event => {
       button.dispatchEvent(new CustomEvent('quick-look-button-tapped'));
@@ -259,6 +259,12 @@ $(document).ready(function () {
           }
           let href = `${iosSrc}#custom=https://adv-marketplace.advin-global.com/witnes.html&allowsContentScaling=0`;
           console.log(href);
+
+          Notiflix.Loading.hourglass('AR may need a few seconds to load...', {
+            clickToClose: true,
+          });
+
+          Notiflix.Loading.remove(3000);
 
           const Element = document.getElementById('ar-link');
           Element.href = `${iosSrc}#custom=https://adv-marketplace.advin-global.com/witnes.html&allowsContentScaling=0`;
