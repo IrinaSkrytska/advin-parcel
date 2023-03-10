@@ -228,6 +228,7 @@ $(document).ready(function () {
     }
     anchor.setAttribute('href', href);
     anchor.click();
+    
     console.log('I`m here and notiflix should be working');
 
     Notiflix.Loading.hourglass(
