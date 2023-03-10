@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 $(document).ready(function () {
   const buttonChair = document.querySelector('.chair');
   const buttonWashingMachine = document.querySelector('.washingMachine');
