@@ -258,7 +258,9 @@ $(document).ready(function () {
         new CustomEvent('initialized', { detail: 'quick-look' })
       );
 
-      fetch(`https://adv-marketplace-back.onrender.com/examples/models/${id}`)
+      fetch(
+        `https://adv-marketplace-back-57bm.onrender.com/examples/models/${id}`
+      )
         .then(response => response.json())
         .then(({ data }) => {
           const iosSrc = data.model.ios;
@@ -289,9 +291,12 @@ $(document).ready(function () {
 
       Notiflix.Loading.remove(2000);
       // system supports AR via scene viewer
-      fetch(`https://adv-marketplace-back.onrender.com/examples/models/${id}`, {
-        cache: 'no-store',
-      })
+      fetch(
+        `https://adv-marketplace-back-57bm.onrender.com/examples/models/${id}`,
+        {
+          cache: 'no-store',
+        }
+      )
         .then(response => response.json())
         .then(({ data }) => {
           const androidSrc = data.model.android;
